@@ -2,14 +2,14 @@
  * Feel free to change name of colors if you need it
  * Feel free to add new colors if you need it
  */
-:root {
+/*:root {
     --bg-color--dark: #0b192f;
     --bg-color--header: #162b4d;
     --link: #fff;
     --link--hover: #b8b8b8;
     --bg-footer-color: #162b4d;
 }
-
+*/
 body {
     font-family: roboto;
 }
@@ -34,7 +34,6 @@ body {
     background: #2d95bb;
 }
 
-/* Your styles go here */
 html,
 body {
     background: #0b192f;
@@ -118,11 +117,6 @@ header nav {
     background-color: #314669;
 }
 
-.wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space space-between;
-}
 
 footer {
     background: #162b4d;
@@ -349,20 +343,20 @@ main aside {
     font-size: 2em;
 }
 
-
+.hidden-nav {
+    display: none;
+}
 
 
 @media only screen and (max-device-width: 768px) {
 
-    /*	for width of device between 481px and 768px*/
-    
-    .logo{
+    .logo {
         display: flex;
         justify-content: center;
         flex-direction: row;
         order: 2;
     }
-    
+
     header nav {
         display: none;
     }
@@ -406,18 +400,20 @@ main aside {
 
     .post {
         display: flex;
-            flex-direction: column;
+        flex-direction: column;
     }
-    .post-img, .post-item{
+
+    .post-img,
+    .post-item {
         display: flex;
         width: 100%;
         flex-direction: column;
     }
 
-    .post-date{
+    .post-date {
         position: absolute;
-    font-weight: lighter;
-    opacity: 0.6;
+        font-weight: lighter;
+        opacity: 0.6;
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -428,7 +424,6 @@ main aside {
 
 @media only screen and (max-device-width: 480px) {
 
-    /*	for width of device less than 481px*/
     body {
         width: 100%;
         font-weight: 100;
