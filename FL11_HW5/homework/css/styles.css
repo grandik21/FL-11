@@ -1,0 +1,446 @@
+/*
+ * Feel free to change name of colors if you need it
+ * Feel free to add new colors if you need it
+ */
+/*:root {
+    --bg-color--dark: #0b192f;
+    --bg-color--header: #162b4d;
+    --link: #fff;
+    --link--hover: #b8b8b8;
+    --bg-footer-color: #162b4d;
+}
+*/
+body {
+    font-family: roboto;
+}
+
+.post-1 {
+    background: #B71757;
+}
+
+.post-2 {
+    background: #0D7E71;
+}
+
+.post-3 {
+    background: #b1660e;
+}
+
+.post-4 {
+    background: #d12767;
+}
+
+.post-5 {
+    background: #2d95bb;
+}
+
+html,
+body {
+    background: #0b192f;
+    margin: 0;
+    height: 100%;
+}
+
+a:hover {
+    color: #b8b8b8;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.logo p {
+    color: #fff;
+    font-weight: lighter;
+    font-size: 1.5em;
+    margin: 0 0 0 15px;
+}
+
+.logo p > span {
+    color: #ff1c57;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    background: #162b4d;
+    margin-bottom: 25px;
+}
+
+header nav {
+    margin-right: 25px;
+    display: flex;
+    flex-direction: row;
+
+    height: 100%;
+}
+
+.hidden-nav {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 15px;
+    height: 15px;
+    margin: auto;
+
+}
+
+.hidden-nav div {
+    height: 1px;
+    background-color: white;
+    width: 100%;
+}
+
+.nav-item {
+    display: flex;
+    height: 100%;
+    margin: auto;
+}
+
+.nav-item > a {
+    padding: 0 25px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    transition-duration: 1s;
+    transition-property: background-color;
+}
+
+.nav-item > a:hover {
+    background-color: #314669;
+}
+
+
+footer {
+    background: #162b4d;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #fff;
+    font-weight: lighter;
+    padding: 25px;
+    line-height: 1.5;
+
+}
+
+footer p {
+    margin: 0;
+    opacity: 0.6;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+main section {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin-right: 25px;
+}
+
+.post:nth-child(odd) .post-date {
+    top: 3%;
+    right: 2%;
+}
+
+.post:first-child .post-item {
+    background-color: #B71757;
+}
+
+.post:nth-child(2) .post-item {
+    background: #0D7E71;
+}
+
+.post:nth-child(3) .post-item {
+    background: #b1660e;
+}
+
+.post:nth-child(4) .post-item {
+    background: #d12767;
+}
+
+.post:nth-child(even) .post-date {
+    left: 2%;
+}
+
+.post:nth-child(even) .post-item {
+    order: 1;
+    text-align: right;
+    padding-right: 0;
+    /* padding-left: 10%;*/
+}
+
+.post:nth-child(even) .post-title {
+    text-align: right;
+}
+
+.post:nth-child(even) .post-img {
+    order: 2;
+}
+
+.post-item::after,
+.post-img::after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+
+
+}
+
+
+.post {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    color: #fff;
+}
+
+.post-img {
+    width: 50%;
+    display: flex;
+}
+
+.post-item {
+    width: 50%;
+    box-sizing: border-box;
+    position: relative;
+    padding: 5%;
+}
+
+
+.post-img img {
+    width: 100%;
+}
+
+.post-title {
+    font-weight: lighter;
+    font-size: 3em;
+    width: 60%;
+    margin: 0;
+}
+
+.post-item p {
+    font-weight: lighter;
+    line-height: 1.5;
+    width: 85%;
+    font-size: 1.2em;
+}
+
+.post-date {
+    position: absolute;
+    font-weight: lighter;
+    opacity: 0.6;
+}
+
+.day {
+    font-size: 3.5em;
+    display: block;
+    text-align: center;
+}
+
+.month {
+    font-size: 1.5em;
+    display: block;
+    text-align: center;
+}
+
+main aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 24%;
+}
+
+.bottom-post {
+    color: #fff;
+    padding: 5%;
+    background: #2d95bb;
+    position: relative;
+}
+
+.bottom-post p {
+    line-height: 1.5;
+    font-weight: lighter;
+    width: 90%;
+}
+
+.bottom-title {
+    font-weight: lighter;
+    font-size: 3em;
+    margin: 0;
+    letter-spacing: 3px;
+}
+
+.bottom-date {
+    position: absolute;
+    right: 3%;
+}
+
+.bottom-day {
+    font-size: 3.5em;
+    font-weight: lighter;
+    display: block;
+    text-align: center;
+    opacity: 0.6;
+}
+
+.bottom-month {
+    font-size: 1.5em;
+    font-weight: lighter;
+    display: block;
+    text-align: center;
+    opacity: 0.6;
+}
+
+.aside-content {
+    width: 100%;
+    margin-bottom: 25px;
+    background: #fff;
+}
+
+.aside-item {
+    color: #000;
+    padding: 15px 30px;
+}
+
+.aside-item p {
+    font-weight: 400;
+    color: #808080;
+    line-height: 1.5;
+}
+
+.aside-img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+}
+
+.aside-img img {
+    width: 100%;
+}
+
+.aside-title {
+    font-weight: 300;
+    font-size: 2em;
+}
+
+.hidden-nav {
+    display: none;
+}
+
+
+@media only screen and (max-device-width: 768px) {
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        order: 2;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .hidden-nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: auto;
+        margin-right: auto;
+        width: 15px;
+        height: 15px;
+        order: 1;
+    }
+
+    .hidden-nav div {
+        height: 1px;
+        background-color: white;
+        width: 100%;
+    }
+
+    header h1 {
+        margin-right: auto;
+        margin-left: auto;
+        justify-content: center;
+    }
+
+    main section {
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+        margin-right: 25px;
+    }
+
+    .post {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .post-img,
+    .post-item {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .post-date {
+        position: absolute;
+        font-weight: lighter;
+        opacity: 0.6;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+}
+
+@media only screen and (max-device-width: 480px) {
+
+    body {
+        width: 100%;
+        font-weight: 100;
+    }
+
+    main {
+        display: block;
+    }
+
+    main section {
+        width: 100%;
+        float: none;
+    }
+
+    aside {
+        width: 100%;
+        margin-bottom: 30px;
+        float: none;
+    }
+}
